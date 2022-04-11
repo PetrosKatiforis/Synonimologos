@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: Arial, sans-serif;
+}
+
+:root {
+  --bg-body: #DBDBDB;
+  --bg-border: #BBBBBB;
+}
+
+body {
+  background: var(--bg-body);
+}
