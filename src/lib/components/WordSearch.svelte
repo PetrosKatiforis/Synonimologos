@@ -9,11 +9,20 @@
   function onFormSubmit() {
     if (searchQuery == wordData.word) return
 
-    const synonyms = searchFromKey(searchQuery)
-    const deepSynonyms = searchDeep(searchQuery)
+    let synonyms = searchFromKey(searchQuery)
+    let deepSynonyms = searchDeep(searchQuery)
 
     // If absolutely nothing was found
-    if (!synonyms.length && !synonyms.length) return
+    if (!synonyms.length && !deepSynonyms.length) {
+      wordData = {}
+      return
+    }
+
+    // If there are only deep synonyms, make them the primary choice 
+    if (!synonyms.length) {
+        synonyms = deepSynonyms
+        deepSynonyms = []
+    }
 
     wordData = {
       word: searchQuery,
