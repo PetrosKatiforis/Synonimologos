@@ -29,7 +29,7 @@
     display: flex;
     justify-content: center;
 
-    margin-top: 6em;
+    margin-top: 3.5em;
   }
 
   h1 {
@@ -37,5 +37,11 @@
     font-weight: 400;
     text-align: center;
     margin-bottom: 0.8em;
+  }
+
+  @media (min-width: 30em) {
+    main {
+      margin-top: 6em;
+    }
   }
 </style>

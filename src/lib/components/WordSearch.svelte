@@ -7,6 +7,9 @@
   let wordData = {}
 
   function onFormSubmit() {
+    // Trim left and right spaces
+    searchQuery = searchQuery.trim()
+
     if (searchQuery == wordData.word) return
 
     let synonyms = searchFromKey(searchQuery)
