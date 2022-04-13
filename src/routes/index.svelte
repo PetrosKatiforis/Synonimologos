@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>Synonimologos</title>
+  <title>Συνωνημολόγος Online</title>
 </svelte:head>
 
 <main>
@@ -29,11 +29,12 @@
     display: flex;
     justify-content: center;
 
-    margin-top: 10em;
+    margin-top: 6em;
   }
 
   h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    font-weight: 400;
     text-align: center;
     margin-bottom: 0.8em;
   }

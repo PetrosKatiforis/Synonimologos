@@ -7,10 +7,18 @@
 }
 
 :root {
-  --bg-body: #DBDBDB;
-  --bg-border: #BBBBBB;
+  --fg-primary: #447350;
+
+  --bg-body: #1c1c1c;
+  --bg-input: #333333;
+  --bg-border: #555;
+
+  --radius: 5px;
 }
 
 body {
   background: var(--bg-body);
+  color: white;
+
+  padding: 2em;
 }
