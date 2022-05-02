@@ -8,13 +8,18 @@
 
 <main>
   <div>
-    <h1>Synonimologos</h1>
+    <img src="/Logo.svg" />
 
     <WordSearch />
   </div>
 </main>
 
 <style>
+  img {
+    margin-bottom: 1.65em;
+    width: 230px;
+  }
+
   div {
     width: 500px;
 
@@ -42,6 +47,10 @@
   @media (min-width: 30em) {
     main {
       margin-top: 6em;
+    }
+
+    img {
+      width: 280px;
     }
   }
 </style>
