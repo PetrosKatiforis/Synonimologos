@@ -1,9 +1,19 @@
 import dictionary from "$lib/data/dictionary.js"
 
-function isMatch(string, target) {
+function compareGreek(string, target) {
   // Compare the two strings without considering accents and casing
   
-  return target?.localeCompare(string, "el", { sensitivity: "base" }) === 0
+  return target.localeCompare(string, "el", { sensitivity: "base" }) === 0
+}
+
+function isMatch(string, target) {
+  
+  // Better search results for special case of greek verb ending
+  if (compareGreek(string.slice(string.length - 2), "άω")) {
+    string = string.slice(0, string.length - 2) + "ώ"
+  }
+
+  return compareGreek(string, target)
 }
 
 export function searchFromKey(query) {
@@ -37,5 +47,5 @@ export function searchDeep(query) {
     }
   }
 
-  return allSynonyms.filter(item => item != query)
+  return allSynonyms
 }
