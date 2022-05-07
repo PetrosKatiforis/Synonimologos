@@ -30,7 +30,13 @@
     display: flex;
     flex-direction: column;
 
+    max-width: 85vw;
+
     cursor: initial;
     z-index: 999;
+  }
+
+  div :global(> *) {
+    max-width: 100%;
   }
 </style>

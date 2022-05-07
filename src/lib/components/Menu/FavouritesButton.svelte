@@ -39,7 +39,8 @@
     display: flex;
     flex-direction: column;
     
-    padding: 0.5em;
+    padding: 1em 0.5em;
+
     gap: 0.5em;
 
     align-items: center;

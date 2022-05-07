@@ -25,21 +25,46 @@
 
 <style>
   .tabs__container {
-    margin: 0 auto;
     user-select: none;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    flex-wrap: wrap;
     margin-top: 1em;
-    gap: 0.5em;
+    width: auto;
+    white-space: nowrap;
+    
 
-    max-width: 750px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  @media (min-width: 30em) {
+    .tabs__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 0.5em;
+
+      margin: 0 auto;
+      margin-top: 1em;
+
+      max-width: 750px;
+      flex-wrap: wrap;
+    }
+
+    .tabs__container .tab {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  .tab:first-child {
+    margin-left: 1em;
   }
 
   .tab {
+    display: inline-block;
+    margin-right: 1em;
+
     background: var(--bg-lighter);
     padding: 0.5em 0.7em;
 

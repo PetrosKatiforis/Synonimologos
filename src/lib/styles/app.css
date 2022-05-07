@@ -6,6 +6,7 @@
   font-family: Arial, sans-serif;
   
   scrollbar-width: none;
+  word-break: break-word;
 }
 
 :root {
@@ -36,10 +37,4 @@ body {
 
 a {
   color: teal;
-}
-
-@media (max-width: 20em) {
-  :root {
-    --padding-x: 1em;
-  }
 }
