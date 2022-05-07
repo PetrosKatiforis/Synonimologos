@@ -4,15 +4,16 @@
   box-sizing: border-box;
 
   font-family: Arial, sans-serif;
+  
+  scrollbar-width: none;
 }
 
 :root {
-  --fg-primary: #1b4ab7ff;
+  --bg-body: #131313;
+  --bg-lighter: #242424;
+  --bg-border: #3F3F3F;
 
-  --bg-body: #1c1c1c;
-  --bg-input: #333333;
-  --bg-border: #555;
-
+  --padding-x: 2em;
   --radius: 5px;
 }
 
@@ -20,5 +21,25 @@ body {
   background: var(--bg-body);
   color: white;
 
-  padding: 2em;
+  padding: 2em 0;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.icon__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: teal;
+}
+
+@media (max-width: 20em) {
+  :root {
+    --padding-x: 1em;
+  }
 }

@@ -16,36 +16,27 @@ function isMatch(string, target) {
   return compareGreek(string, target)
 }
 
-export function searchFromKey(query) {
-  // Check if the word is a dictionary key
-  for (let key of Object.keys(dictionary)) {
+export function completeSearch(query) {
+  let searchResults = {}
+
+  for (let [key, synonyms] of Object.entries(dictionary)) {
+    // Check if the entry's key is a match, if yes append the synonyms directly
     if (isMatch(query, key)) {
-      return dictionary[key]
+      searchResults[synonyms[0]] = synonyms
+      continue
     }
-  }
 
-  return []
-}
-
-export function searchDeep(query) {
-  let allSynonyms = []
-
-  // If the word is not a key in the dictionary
-  // Search it in the synonyms array of each entry
-  for (let [word, synonyms] of Object.entries(dictionary)) {
-
+    // Check if the query is included inside the synonyms list
     for (let synonym of synonyms) {
       if (isMatch(query, synonym)) {
 
-        // Push synonyms without the searched word being included
-        allSynonyms = allSynonyms.concat(
-          [...synonyms.filter(item => !isMatch(query, item) && !allSynonyms.includes(item)), word]
-        )
-
+        // Remove the duplicate item 
+        searchResults[key] = [...synonyms.filter(item => !isMatch(query, item))]
+        
         break
       }
     }
   }
 
-  return allSynonyms
+  return searchResults
 }
