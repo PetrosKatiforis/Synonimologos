@@ -28,7 +28,7 @@
     { synonym }
 
     <SynonymsOptions 
-      {isOpen} {toggleIsOpen} {synonym} 
+      {isOpen} {toggleIsOpen} word={synonym} 
     />
   </button>
 {/key}

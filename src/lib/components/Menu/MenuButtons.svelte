@@ -27,4 +27,10 @@
 
     gap: 1em;
   }
+
+  @media (max-width: 30em) {
+    .menu__buttons {
+      gap: 0.5em;
+    }
+  }
 </style>

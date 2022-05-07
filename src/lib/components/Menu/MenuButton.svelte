@@ -39,4 +39,11 @@
 
     cursor: pointer;
   }
+
+
+  @media (max-width: 30em) {
+    button {
+      font-size: 0.75rem;
+    }
+  }
 </style>

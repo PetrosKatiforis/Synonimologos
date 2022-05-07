@@ -15,7 +15,6 @@
   {/each}
 </div>
 
-
 <style>
   .synonyms__container {
     margin: 0 auto;
@@ -30,5 +29,11 @@
 
     padding: 0 var(--padding-x);
     max-width: 550px;
+  }
+
+  @media (max-width: 30em) {
+    .synonyms__container {
+      margin-top: 4em;
+    }
   }
 </style>

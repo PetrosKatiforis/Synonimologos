@@ -27,10 +27,16 @@
   .tabs__container {
     user-select: none;
 
-    margin-top: 1em;
-    width: auto;
+    display: flex;
+    align-items: center;
+
     white-space: nowrap;
-    
+    padding: 0 1em;
+
+    gap: 0.5em;
+
+    margin: 0 auto;
+    margin-top: 1em;
 
     overflow-x: auto;
     overflow-y: hidden;
@@ -38,33 +44,19 @@
 
   @media (min-width: 30em) {
     .tabs__container {
-      display: flex;
-      align-items: center;
       justify-content: center;
-
-      gap: 0.5em;
-
-      margin: 0 auto;
-      margin-top: 1em;
 
       max-width: 750px;
       flex-wrap: wrap;
     }
 
     .tabs__container .tab {
-      display: block;
       margin: 0;
     }
   }
 
-  .tab:first-child {
-    margin-left: 1em;
-  }
-
   .tab {
-    display: inline-block;
-    margin-right: 1em;
-
+    margin: 0 auto;
     background: var(--bg-lighter);
     padding: 0.5em 0.7em;
 

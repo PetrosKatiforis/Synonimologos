@@ -1,11 +1,18 @@
 <script>
-  import IconButton from "$lib/components/IconButton.svelte"
   import MdStarBorder from "svelte-icons/md/MdStarBorder.svelte"
-
+  import IconButton from "$lib/components/IconButton.svelte"
   import Dropdown from "$lib/components/Dropdown.svelte"
+
   import { favourites } from "$lib/stores/favouritesStore.js"
+  import { synonym } from "$lib/stores/synonymsStore.js"
 
   let isOpen = false
+
+  function updateSynonym(word) {
+    synonym.set(word)
+
+    toggleIsOpen()
+  }
 
   function toggleIsOpen() {
     // Toggle the dropdown's activated state
@@ -22,7 +29,12 @@
   <Dropdown {isOpen} {toggleIsOpen}>
     <div class="dropdown__content">
       {#each $favourites as favourite}
-        <p>{ favourite }</p>
+        <p
+          style="cursor: pointer;"
+          on:click={() => updateSynonym(favourite)}
+        >
+          { favourite }
+        </p>
 
       {:else}
         <p>Η λίστα είναι ακόμα άδεια...</p>

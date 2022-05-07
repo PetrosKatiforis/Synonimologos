@@ -1,19 +1,24 @@
 <script>
-  import { createEventDispatcher } from "svelte"
+  import { synonym } from "$lib/stores/synonymsStore.js"
   import MdSearch from "svelte-icons/md/MdSearch.svelte"
 
-  // Creates a custom search event that the parent can listen for
-  const dispatch = createEventDispatcher()
-
   let searchQuery
+
+  function updateCurrentSynonym() {
+    synonym.set(searchQuery)
+  }
 
   function onInputKey(event) {
       
     // If the enter key is pressed, fire the search function
     if (event.key === "Enter") {
-      dispatch("search", searchQuery)
+      updateCurrentSynonym()
     }
   }
+
+  synonym.subscribe(value => {
+    searchQuery = value
+  })
 </script>
 
 <div id="searchbar">
@@ -26,7 +31,7 @@
 
   <div
     class="icon__container"
-    on:click={() => dispatch("search", searchQuery)}
+    on:click={updateCurrentSynonym}
   >
     <MdSearch />
   </div>

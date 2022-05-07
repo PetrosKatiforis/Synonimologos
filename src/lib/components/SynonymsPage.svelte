@@ -7,17 +7,18 @@
   import IntroductionMessage from "$lib/components/IntroductionMessage.svelte"
 
   import { completeSearch } from "$lib/utils/wordSearch.js"
-
-  // This function will be executed when the search bar is submitted
-  function search(event) {
-    const query = event.detail
-    
-    searchData = completeSearch(query)
-    selectedKey = Object.keys(searchData)[0]
-  }
+  import { synonym } from "$lib/stores/synonymsStore.js"
 
   let searchData = {}
-  let selectedKey 
+  let selectedKey
+  
+  // This function will be executed when the current synonym is updated, however that may happen
+  synonym.subscribe(value => {
+    if (!value) return
+
+    searchData = completeSearch(value)
+    selectedKey = Object.keys(searchData)[0]
+  })
 </script>
 
 <main>
@@ -26,9 +27,7 @@
   <div class="searchbar__area">
     <img src="Synonimologos.svg" />
 
-    <SearchBar
-      on:search={search} 
-    />
+    <SearchBar />
   </div>
 
   {#if Object.keys(searchData).length > 0}

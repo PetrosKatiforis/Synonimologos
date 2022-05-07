@@ -7,21 +7,23 @@
   import MdInfoOutline from "svelte-icons/md/MdInfoOutline.svelte"
 
   import { favourites } from "$lib/stores/favouritesStore.js"
+  import { synonym } from "$lib/stores/synonymsStore.js"
 
   function favourite() {
     favourites.update(data => {
-      console.log(data)
 
-      if (data.includes(synonym)) {
+      // Check if the word is already in the favourites
+      if (data.includes(word)) {
         return data
       }
 
-      return [...data, synonym]
+      return [...data, word]
     })
   }
 
+  // Updates the application's current synonym
   function viewSynonyms() {
-    alert("Viewed synonyms!")
+    synonym.set(word)
   }
 
   let options = [
@@ -30,7 +32,7 @@
   ]
 
   export let isOpen, toggleIsOpen 
-  export let synonym
+  export let word
 </script>
 
 <Dropdown {isOpen} {toggleIsOpen}>
