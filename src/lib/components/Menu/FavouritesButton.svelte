@@ -47,6 +47,7 @@
 <style>
   .dropdown__content {
     width: 120px;
+    text-align: center;
 
     display: flex;
     flex-direction: column;
