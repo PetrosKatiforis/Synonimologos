@@ -3,7 +3,7 @@
 </script>
 
 <div class="menu__buttons">
-  <MenuButton label="Πως Δημιουργήθηκε">
+  <MenuButton label="Πώς Δημιουργήθηκε">
     <p>Η ιστοσελίδα δημιουργήθηκε χρησιμοποιώντας την Svelte.js</p>
     
     <p>Ο κώδικας είναι δημοσίως διαθέσιμος 

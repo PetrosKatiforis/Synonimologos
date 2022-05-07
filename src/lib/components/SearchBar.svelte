@@ -5,7 +5,7 @@
   let searchQuery
 
   function updateCurrentSynonym() {
-    synonym.set(searchQuery)
+    synonym.set(searchQuery.trim())
   }
 
   function onInputKey(event) {
