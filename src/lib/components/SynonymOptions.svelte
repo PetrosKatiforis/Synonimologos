@@ -39,7 +39,7 @@
   <div class="options__container">
     <IconButton
       label="Δες Ορισμό"
-      href={`https://el.wiktionary.org/wiki/${synonym}`}
+      href={`https://el.wiktionary.org/wiki/${word}`}
     >
 
       <MdRemoveRedEye />
