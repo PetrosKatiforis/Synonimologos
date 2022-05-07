@@ -5,7 +5,6 @@
 
   font-family: Arial, sans-serif;
   
-  scrollbar-width: none;
   word-break: break-word;
 }
 
@@ -23,10 +22,7 @@ body {
   color: white;
 
   padding: 2em 0;
-}
-
-*::-webkit-scrollbar {
-  display: none;
+  overflow-x: auto;
 }
 
 .icon__container {

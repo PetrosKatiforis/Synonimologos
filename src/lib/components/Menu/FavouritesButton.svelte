@@ -53,7 +53,10 @@
     
     padding: 1em 0.5em;
 
-    gap: 0.5em;
+    gap: 1.5em;
+    max-height: 200px;
+
+    overflow-y: scroll;
 
     align-items: center;
   }

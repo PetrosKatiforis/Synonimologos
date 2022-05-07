@@ -7,6 +7,7 @@
 
 {#if isOpen}
   <div
+    class="dropdown__container"
     use:clickOutside={toggleIsOpen}
 
     on:click|stopPropagation
@@ -18,13 +19,15 @@
 {/if}
 
 <style>
-  div {
+  .dropdown__container {
     position: absolute;
     margin-top: 1em;
 
     font-size: 0.85rem;
 
     border-radius: var(--radius);
+
+    border: 1px solid var(--bg-border);
     background-color: var(--bg-lighter);
 
     display: flex;

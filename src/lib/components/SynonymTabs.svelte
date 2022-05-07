@@ -40,6 +40,8 @@
 
     overflow-x: auto;
     overflow-y: hidden;
+
+    scrollbar-width: none;
   }
 
   @media (min-width: 30em) {
