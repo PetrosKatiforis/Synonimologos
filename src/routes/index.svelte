@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>Συνωνημολόγος Online</title>
+  <title>Συνωνυμολόγος Online</title>
 </svelte:head>
 
 <main>

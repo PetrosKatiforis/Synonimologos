@@ -26,7 +26,7 @@
     <MdStarBorder />
   </IconButton>
   
-  <Dropdown {isOpen} {toggleIsOpen}>
+  <Dropdown {isOpen} {toggleIsOpen} width={150}>
     <div class="dropdown__content">
       {#each $favourites as favourite}
         <p
@@ -46,19 +46,22 @@
 
 <style>
   .dropdown__content {
-    width: 120px;
     text-align: center;
 
     display: flex;
     flex-direction: column;
     
-    padding: 1em 0.5em;
-
-    gap: 1.5em;
     max-height: 200px;
 
     overflow-y: scroll;
 
     align-items: center;
+  }
+
+  .dropdown__content :global(> *) {
+    padding: 1em 0.5em;
+    width: 100%;
+
+    border-bottom: 1px solid var(--bg-border);
   }
 </style>

@@ -26,7 +26,7 @@
   @media (min-width: 55em) {
     #menubar {
       display: flex;
-      margin-bottom: 8em;
+      margin-bottom: 6em;
     }
   }
 </style>

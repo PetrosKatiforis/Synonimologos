@@ -16,7 +16,7 @@
     { label }
   </button>
 
-  <Dropdown {isOpen} {toggleIsOpen}>
+  <Dropdown {isOpen} {toggleIsOpen} width={300}>
     <div class="dropdown__content">
       <slot />
     </div>
@@ -26,7 +26,6 @@
 <style>
   .dropdown__content {
     padding: 0.7em 1em;
-    width: 400px;
   }
 
   button {

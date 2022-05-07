@@ -35,13 +35,14 @@
 
 <style>
   button {
-    border: 1px solid var(--bg-border);
-    border-radius: 20em;
+    border: 2px dotted var(--bg-border);
+    border-radius: 999px;
 
+    background-color: var(--bg-lighter);
     background: none;
     color: white;
 
-    padding: 0.7em 1.2em;
+    padding: 0.6em 1.1em;
     cursor: pointer;
   }
 </style>

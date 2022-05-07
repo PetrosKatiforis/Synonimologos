@@ -35,7 +35,7 @@
   export let word
 </script>
 
-<Dropdown {isOpen} {toggleIsOpen}>
+<Dropdown {isOpen} {toggleIsOpen} width={150}>
   <div class="options__container">
     <IconButton
       label="Δες Ορισμό"
