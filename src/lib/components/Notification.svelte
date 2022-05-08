@@ -33,7 +33,11 @@
     </div>
 
     <div>
-      <div class="progress"></div>
+      <div 
+        class="progress"
+        style="--duration: {notification.duration}ms"
+      >
+      </div>
     </div>
   </div>
 {/key}
@@ -74,6 +78,6 @@
     background-color: white;
     height: 3px;
 
-    animation: progress linear 2000ms;
+    animation: progress linear var(--duration);
   }
 </style>
