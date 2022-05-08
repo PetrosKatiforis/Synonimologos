@@ -8,8 +8,14 @@
 
   import { favourites } from "$lib/stores/favouritesStore.js"
   import { synonym } from "$lib/stores/synonymsStore.js"
+  import { notify } from "$lib/stores/notificationStore.js"
 
   function favourite() {
+    notify(
+      "Η λέξη αποθηκεύτηκε!", 
+      "Μπορείτε πλέον να αναζητήσετε εύκολα τη λέξη σας στη λίστα των αγαπημένων"
+    )
+
     favourites.update(data => {
 
       // Check if the word is already in the favourites

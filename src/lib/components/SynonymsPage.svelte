@@ -8,6 +8,7 @@
 
   import { completeSearch } from "$lib/utils/wordSearch.js"
   import { synonym } from "$lib/stores/synonymsStore.js"
+  import { notify } from "$lib/stores/notificationStore.js"
 
   let searchData = {}
   let selectedKey
@@ -17,7 +18,15 @@
     if (!value) return
 
     searchData = completeSearch(value)
-    selectedKey = Object.keys(searchData)[0]
+    selectedKey = Object.keys(searchData)?.[0]
+
+    if (Object.keys(searchData).length < 1) {
+
+      notify(
+        "Η λέξη δεν βρέθηκε!",
+        "Δείτε προσεκτικά τις οδηγίες χρήσεις ή επικοινωνήστε μαζί μας. Προσέξτε την ορθογραφία!"
+      )
+    }
   })
 </script>
 

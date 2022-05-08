@@ -8,7 +8,9 @@
   let x
   let element 
 
-  $: if (element && isOpen) {
+  // Limiting the dropdown's position according to the screen size
+
+  $: if (element && element.parentElement && isOpen) {
     const rect = element.getBoundingClientRect()
 
     let parentPosition = element.parentElement.getBoundingClientRect().left
