@@ -8,6 +8,7 @@ export function notify(title, message) {
   notifications.update(notifications => [...notifications, {
     title,
     message,
+    key: (new Date().getTime()) + title,
 
     duration: 3000,
   }])

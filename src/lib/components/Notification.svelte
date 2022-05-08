@@ -8,7 +8,7 @@
 
   function deleteNotification() {
     notifications.update(notifications => 
-      [...notifications.filter(item => item.title !== notification.title)]
+      [...notifications.filter(item => item.key !== notification.key)]
     )
   }
 
@@ -21,26 +21,24 @@
   })
 </script>
 
-{#key notification.title}
-  <div
-    class="notification"
-    on:click={deleteNotification}
-    transition:fly={{ y: -100, duration: 200 }}
-  >
-    <div class="info">
-      <h1>{ notification.title }</h1> 
-      <p>{ notification.message }</p>
-    </div>
+<div
+  class="notification"
+  on:click={deleteNotification}
+  transition:fly={{ y: -100, duration: 200 }}
+>
+  <div class="info">
+    <h1>{ notification.title }</h1> 
+    <p>{ notification.message }</p>
+  </div>
 
-    <div>
-      <div 
-        class="progress"
-        style="--duration: {notification.duration}ms"
-      >
-      </div>
+  <div>
+    <div 
+      class="progress"
+      style="--duration: {notification.duration}ms"
+    >
     </div>
   </div>
-{/key}
+</div>
 
 <style>
   .notification {

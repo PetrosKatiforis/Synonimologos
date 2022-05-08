@@ -7,7 +7,7 @@
 <div
   class:busy={$notifications.length > 0}
 >
-  {#each $notifications as notification}
+  {#each $notifications as notification (notification.key)}
     <Notification {notification} />
   {/each}
 </div>
