@@ -14,7 +14,7 @@
 
 <style>
   div {
-    position: absolute;
+    position: fixed;
     pointer-events: none;
     z-index: 999999;
 
