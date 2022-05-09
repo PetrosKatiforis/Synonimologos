@@ -6,9 +6,6 @@
   font-family: Arial, sans-serif;
   
   word-break: break-word;
-
-  scrollbar-width: thin;
-  scrollbar-color: none #222222;
 }
 
 :root {
@@ -38,20 +35,4 @@ body {
 
 a {
   color: teal;
-}
-
-*::-webkit-scrollbar {
-  width: 12px;
-  border-radius: 5px;
-}
-
-*::-webkit-scrollbar-track {
-  background: none;
-}
-
-*::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  border: none;
-
-  background-color: 222222;
 }
