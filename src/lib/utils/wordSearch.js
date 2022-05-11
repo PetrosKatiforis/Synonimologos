@@ -31,7 +31,7 @@ export function completeSearch(query) {
       if (isMatch(query, synonym)) {
 
         // Remove the duplicate item 
-        searchResults[key] = [...synonyms.filter(item => !isMatch(query, item))]
+        searchResults[key] = [...synonyms.filter(item => !isMatch(query, item)), key]
         
         break
       }
