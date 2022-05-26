@@ -11,7 +11,7 @@
 Η εφαρμογή δημιουργήθηκε χρησιμοποιώντας δωρεάν και open source εργαλεία:
 
   - Inkscape για τη δημιουργία του svg λογότυπου
-  - SvelteKit ως frontend framework αλλά και compiler
+  - SvelteKit ως frontend framework αλλά και "compiler"
 
 <br />
 <br />
