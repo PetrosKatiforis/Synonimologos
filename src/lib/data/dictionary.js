@@ -1,12 +1,4 @@
 
-Skip to content
-Pulls
-Issues
-Marketplace
-Explore
-@PetrosKatiforis
-PetrosKatiforis /
-
  export default {
  	"παιδί": ["τέκνο", "γόνος", "ανήλικος", "βλαστάρι"],
  	"κλείνω": ["τερματίζω", "παύω", "εμποδίζω", "βουλώνω", "καλύπτω", "φυλακίζω", "δεσμεύω", "καθείργω", "εγκλείω", "διακόπτω"],
